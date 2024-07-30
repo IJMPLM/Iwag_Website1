@@ -27,7 +27,7 @@
       <div id="profile" class="hidden">
         <h1>John Michael Iwag</h1>
         <br/>
-        <h2>Software Engineer</h3>
+        <h2>Software Engineer</h2>
         <br/>
         <a class="extButton" href="assets/IwagResume1.pdf" download="IwagResume1.pdf">Download Resume</a>
       </div>
@@ -37,11 +37,17 @@
       <div id="projects">
         <h1 class="year-header">2024</h1>
         <div class="project-list">
-          <div class="project-box">
+          <div class="project-box" onclick="expandBox(this)" title="Click to Expand">
             <div><img src="assets/kg_ozone_screenshot.png"></div>
           </div>
           <div class="project-box"></div>
           <div class="project-box"></div>
+          
+          <div class="expanded">
+            <div class="project-metadata" style="color:white">Metadata content</div>
+            <div class="project-description" style="color:white">Description</div>
+          </div>
+          
         </div>
       </div>
       <div id="roles"></div>

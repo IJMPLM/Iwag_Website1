@@ -46,3 +46,8 @@ const observer1 = new IntersectionObserver((entries)=> {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((element) => observer1.observe(element));
 
+//box expander
+function expandBox(box) {
+    box.classList.remove('project-box');
+    box.classList.add("expanded");
+}
