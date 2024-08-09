@@ -15,8 +15,8 @@
 </head>
 <body>
     <header>
-      <nav class="navbar">
-        <a href="#profile" class="nav-link active-nav">Profile</a>
+      <nav class="navbar" id="navbar">
+        <a href="#top" class="nav-link active-nav">Profile</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#roles" class="nav-link">Roles</a>
         <a href="#qualifications" class="nav-link">Qualifications</a>
@@ -33,21 +33,66 @@
       </div>
 
       
-      <h1 class="section-header">- - PROJECTS - - </h1>
+      <h1 class="section-header"> - - PROJECTS - - </h1>
       <div id="projects">
         <h1 class="year-header">2024</h1>
         <div class="project-list">
-          <div class="project-box" onclick="expandBox(this)" title="Click to Expand">
-            <div><img src="assets/kg_ozone_screenshot.png"></div>
-          </div>
-          <div class="project-box"></div>
-          <div class="project-box"></div>
-          
-          <div class="expanded">
-            <div class="project-metadata" style="color:white">Metadata content</div>
-            <div class="project-description" style="color:white">Description</div>
-          </div>
-          
+          <div class="project-box" title="Click to Expand">
+            <img src="assets/kg_ozone_screenshot.png">
+            <div class="hover-content">Java | Full Stack Developer | April</div>
+            <div class="project-metadata hidden-content" style="color:white">
+              <div class="info-list">
+                <h1>KG-Ozone e-commerce</h1>
+                <h2>Web Application</h2>
+                <div class="info-item">Role: Full Stack Developer</div>
+                <div class="info-item">Technologies: Java Server Pages (JSP), CSS, Javascript, Servlet, Postgresql</div>
+                <div class="info-item">Duration: 3 months (Apr - June)</div>
+                <br><br>
+              </div>
+            </div>
+            <div class="project-description hidden-content" style="color:white">
+              <p>
+                KG-Ozone is an e-commerce website that sells vape and similar products.
+                The website is built using Java Server Pages (JSP) for the front-end and Servlet for the back-end, 
+                connected to a Postgresql database for storing user and product information, the web application was ready
+                to be hosted on a web service such as AWS or Heroku. The web application features interfaces both for buyers
+                and sellers with different functionalities and custom authentication. The project concluded after the web app 
+                was presented to a set of panel that gave feedback and recommendation for future improvements and better practices. 
+              </p>
+              <br><br><br>
+              <div class="info-item">Documentation: <a href="https://github.com/IJMPLM/kg-ozone-eclipse">Github Repo</a> </div>
+              <div class="intButton minimize">Minimize <img src="assets/WhiteMinimize.png"></div>
+            </div>
+          </div>  
+        </div>
+        <h1 class="year-header">2023</h1>
+        <div class="project-list">
+          <div class="project-box" title="Click to Expand">
+            <div class="hover-content">C++ | Robot Programmer | February</div>
+            <img src="assets/ChRoVac.jpg">
+            <div class="project-metadata hidden-content" style="color:white">
+              <div class="info-list">
+                <h1>Cheaper Robot Vacuum (ChRoVac)</h1>
+                <h2>Robotics Project</h2>
+                <div class="info-item">Role: Porject Lead, Robot Programmer, and Engineer</div>
+                <div class="info-item">Technologies: C++ (Arduino)</div>
+                <div class="info-item">Duration: 5 months (Feb - June)</div>
+              </div>
+            </div>
+            <div class="project-description hidden-content" style="color:white">
+              <p>
+                KG-Ozone is an e-commerce website that sells vape and similar products.
+                The website is built using Java Server Pages (JSP) for the front-end and Servlet for the back-end, 
+                connected to a Postgresql database for storing user and product information, the web application was ready
+                to be hosted on a web service such as AWS or Heroku. The web application features interfaces both for buyers
+                and sellers with different functionalities and custom authentication. The project concluded after the web app 
+                was presented to a set of panel that gave feedback and recommendation for future improvements and better practices. 
+              </p>
+              <br><br><br>
+              <div class="info-item">Documentation: <a href="https://github.com/IJMPLM/kg-ozone-eclipse">Research Abstract</a></div>
+              <div class="intButton minimize">Minimize <img src="assets/WhiteMinimize.png"></div>
+            </div>
+          </div>    
         </div>
       </div>
       <div id="roles"></div>

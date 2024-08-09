@@ -47,7 +47,50 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((element) => observer1.observe(element));
 
 //box expander
-function expandBox(box) {
-    box.classList.remove('project-box');
-    box.classList.add("expanded");
+function expandBox(event) {
+    //changes box dimension and reveals hidden elements
+    event.classList.remove('project-box');
+    event.classList.add("expanded");
+
+    event.removeAttribute('title');
+
+    event.querySelectorAll('.hidden-content').forEach(element => element.classList.remove('hidden-content'));
+
+    //moves img to metadata
+    const imgElement = event.querySelector('img');
+    const metadataElement = event.querySelector('.project-metadata');
+    metadataElement.prepend(imgElement);
+
+    //hide hover-content
+    event.querySelectorAll('.hover-content').forEach(element => element.classList.add('hidden-content'));
+    
 }
+document.querySelectorAll('.project-box').forEach(box => {
+    box.addEventListener('click', function() {
+      expandBox(this);
+    });
+});
+
+
+
+function minimizeBox(child) {
+    const container = child.closest('.expanded');
+    container.classList.remove('expanded');
+    container.classList.add('project-box');
+
+    container.setAttribute('title','Click to Expand');
+    container.querySelectorAll('.project-metadata, .project-description').forEach(element => element.classList.add('hidden-content'));
+
+    const imgElement = container.querySelector('img');
+    container.prepend(imgElement);
+
+    container.querySelectorAll('.hover-content').forEach(element => element.classList.remove('hidden-content'));
+
+}
+
+document.querySelectorAll('.minimize').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.stopPropagation(); 
+        minimizeBox(this);
+    });
+});

@@ -111,7 +111,7 @@ main{
     color: white;
     margin: 1rem 0 1rem 0;
 }
-#profile h3{
+#profile h2{
     display: inline-block;
     font-size: 1.5rem;
     font-family: inter;
@@ -130,15 +130,13 @@ main{
     background-color: rgb(98, 0, 238);
     border: none;
     border-radius: 0.2rem; 
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin: 1rem 0 1rem 0;
 
     text-decoration: none;
     cursor: pointer;
 }
 .extButton:hover {
-    display: inline-block;
-
     color: rgb(247, 221, 255);
 
     background-color: rgb(151, 87, 240);
@@ -156,6 +154,7 @@ main{
     color: white;
     font-size: 3rem;
     font-family: inter;
+    margin: 3rem 0 2rem 0 ;
 }
 
 #projects{
@@ -164,6 +163,7 @@ main{
     align-items: center;
 
     width: 100%;
+    padding: 1rem 0 4rem 0;
 }
 .project-list {
     display: flex;
@@ -176,6 +176,7 @@ main{
 }
 .project-box {
     display:flex;
+    flex-direction: column;
     min-width: 20rem;
     max-height: 15rem;
 
@@ -192,6 +193,29 @@ main{
     box-shadow: 0px 0px 1px 3px rgb(98, 0, 238);
     cursor:pointer;
 }
+.hover-content {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 85%;
+    right: 0;
+
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+    color: white;
+    background-color:  rgb(98, 0, 238);
+    text-align: center;
+    font-family: inter;
+
+    transform: translate(100%, 100%);
+}
+
+.project-box:hover .hover-content {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: opacity 0.3s, transform 0.5s;
+}
+
 .project-box img {
     width: 100%;
     height: 100%;
@@ -209,18 +233,81 @@ main{
 }
 .project-metadata {
     display:flex;
+    flex-direction: column;
+
     width: 50%;
     height: 100%;
     padding-right: 1rem;
-
-    border: red solid 1px;  border: red solid 1px;
-
+}
+.info-list, .info-item{
+    font-family: inter;
+}
+.info-list h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin: 1rem 0 1rem 0;
+}
+.info-list h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 1rem 0 1rem 0;
+}
+.info-item{
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+    margin: 0.5rem 0 0.5rem 0;
 }
 .project-description{
     display:flex;
+    flex-direction: column;
+    justify-content: center;
+
     width: 50%;
     height: 100%;
-    padding-left: 1rem;
+    padding: 0 2rem 0 2rem;
+}
+.project-description p{
+    margin-top: 30%;
 
-    border: yellow solid 1px;
+    font-family: inter;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.intButton {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+
+    width: 7rem;
+
+    font-size:1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: white;
+
+    background-color: rgb(98, 0, 238);
+    border: none;
+    border-radius: 0.2rem; 
+    padding: 0.75rem;
+    margin: auto 0 1rem 0;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+.intButton img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem 0 0.5rem;
+}
+.intButton:hover {
+    color: rgb(247, 221, 255);
+
+    background-color: rgb(151, 87, 240);
+}
+
+.hidden-content{
+    display: none;
 }
