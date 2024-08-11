@@ -364,15 +364,17 @@ main{
     font-family: inter;
     width: 50%;
     color: white;
+
+    padding: 0 3rem 0 3rem;
 }
 .role-description h1{
     font-size: 3rem;
     font-weight: bold;
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0 2rem 0;
 }
 .role-description p{
     font-size: 1rem;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 3rem 0;
 }
 #roles img {
     max-width: 30%;
